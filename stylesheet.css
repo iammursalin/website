@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+@import url("about.css");
+* {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background: #f9f9f9;
+	font-family: 'Poppins', sans-serif;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0 100px;
+	background: rgba(255,255,255,0.2);
+	width: 100%;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+header .logo {
+	color: #000;
+	height: 50px;
+	line-height: 50px;
+	font-size: 25px;
+	float: left;
+	font-weight: bold;
+}
+header .logo a {
+	text-decoration: none;
+	color: #000;
+}
+header nav {
+	float: right;
+}
+header nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+header nav ul li {
+	list-style: none;
+}
+header nav ul li a {
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	color: #000;
+	text-decoration: none;
+	display: block;
+}
+header nav ul li a:hover {
+	color: #fff;
+	background: #2196f3;
+}
+.menu-toggle {
+	color: #000;
+	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: none;
+}
+.scrolled {
+	background: #fff;
+	z-index: 1;
+}
+.banner {
+	width: 100%;
+	height: 100%;
+	background: url(bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.banner .box {
+	position: relative;
+	top: 230px;
+	left: 90px;
+	max-width: 500px;
+	height: 300px;
+}
+.banner .box .content {
+	margin: 0;
+	padding: 25px;
+	background: rgba(255,255,255,0.3);
+	transition: 0.5s;
+}/*
+.banner .box .content:hover {
+	box-shadow: -6px 4px 8px 0px rgba(0,0,0,0.3);
+}*/
+.banner .box .content h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	line-height: 50px;
+}
+.banner .box .content p {
+	font-size: 16px;
+}
+.banner .box .content a {
+	text-align: center;
+	font-size: 15px;
+	text-decoration: none;
+	padding: 10px 25px;
+	background: #000;
+	color: #fff;
+	transition: 0.5s;
+}
+.banner .box .content a:hover {
+	background: #fff;
+	color: #000;
+}
+.jumbo {
+	width: 100%;
+	height: 200px;
+}
+.jumbo .content {
+	max-width: 1000px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.jumbo .content p {
+	padding: 20px;
+	text-align: center;
+	font-size: 17px;
+}
+.jumbo .content a {
+	position: absolute;
+	width: 130px;
+	height: 50px;
+	margin: -15px 0 50px 30px;
+	padding: 10px 20px;
+	white-space: nowrap;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.jumbo .content a:hover {
+	background: #fff;
+	color: #000;
+}
+section {
+	height: 100vh;
+}
+section.jobs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+	background: url(job.jpg);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+section .content h1 {
+	font-size: 2em;
+	margin-bottom: 50px;
+	text-align: center;
+}
+section .content .searchBx {
+	position: relative;
+	display: flex;
+}
+section .content .searchBx input {
+	margin-top: 20px;
+	width: 600px;
+	height: 50px;
+	border-radius: 50px;
+	outline: none;
+	background: none;
+	font-size: 1em;
+	padding-left: 50px;
+	color: #000;
+	font-weight: 700;
+	border: 2px solid #fff;
+	transition: 0.5s;
+}
+section .content .searchBx input:focus {
+	border: 2px solid #000;
+}
+section .content .searchBx a {
+	position: relative;
+	margin-top: 2px;
+	margin-left: 10px;
+	width: 80px;
+	height: 80px;
+	background: #000;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 80px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+section .content .searchBx a:hover {
+	background: #fff;
+	color: #000;
+}
+section .content .pSearch {
+	position: relative;
+	display: flex;
+}
+section .content .pSearch h3 {
+	margin: 25px 10px;
+}
+section .content .pSearch a {
+	position: relative;
+	margin: 15px 10px;
+	padding: 10px 20px;
+	background: rgba(255,255,255,0.5);
+	text-decoration: none;
+	color: #000;
+	transition: 0.5s;
+}
+section .content .pSearch a:hover {
+	background: #fff;
+	color: #000;
+}
+section.services {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0 70px 0;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(services.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+section.services .content h1 {
+	font-size: 3em;
+	color: #fff;
+	text-align: center;
+}
+section.services .content .cardBx {
+	position: relative;
+	max-width: 1200px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+section.services .content .cardBx .card {
+	width: 300px;
+	height: 400px;
+	margin-left: 50px;
+	padding: 20px;
+	background: #fff;
+	justify-content: space-evenly;
+}
+section.services .content .cardBx .card .fa {
+	width: 100px;
+	height: 100px;
+	background: #000;
+	color: #fff;
+	border-radius: 50%;
+	line-height: 95px;
+	font-size: 2em;
+}
+section.about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(about.jpg);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+section.about .content {
+	max-width: 1000px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: #fff;
+}
+section.about .content h1 {
+	font-size: 3em;
+}
+section.about .content p {
+	font-size: 1em;
+	font-weight: 600;
+}
+section.about .content a {
+	padding: 10px 20px;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
+section.about .content a:hover {
+	background: #fff;
+	color: #000;
+}
+.footer {
+	width: 100%;
+	height: 70px;
+}
+.footer ul {
+	max-width: 1200px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer ul li {
+	list-style: none;
+	margin-left: 20px;
+}
+.footer ul li a .fa {
+	font-size: 2em;
+	color: #000;
+	transition: 0.5s;
+}
+.footer ul li a .fa:hover {
+	transform: rotateY(180deg);
+}
+.footer p {
+	text-align: center;
+	/*margin-bottom: 15px;*/
+}
+.footer p a {
+	color: #000;
+	transition: 0.5s;
+}
+.footer p a:hover {
+	color: #0006ff;
+}
+
+/*About Page*/
+section.aboutpage .content {
+	margin: 10px;
+	padding: 100px;
+}
+/*Media Quaries*/
+@media (max-width: 991px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 5px 20px;
+		background: rgba(255,255,255,0.2);
+		max-width: 1000px;
+		box-sizing: border-box;
+		transition: 0.5s;
+	}
+	.menu-toggle {
+		display: block;
+	}
+	header nav {
+		position: absolute;
+		width: 100%;
+		height: calc(100vh - 50px);
+		top: 50px;
+		left: 0;
+		transition: 0.5s;
+	}
+	header .logo {
+		font-size: 2em;
+	}
+	header nav ul li a {
+		height: 50px;
+		line-height: 50px;
+		padding: 0 20px;
+		color: #000;
+		text-decoration: none;
+		display: block;
+	}
+	header nav.active {
+		left: -100%;
+	}
+	header nav ul {
+		display: block;
+		text-align: center;
+	}
+	header nav ul a {
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+	}
+	.banner {
+		padding: 100px 0;
+		display: flex;
+	}
+	.banner .box {
+		position: absolute;
+		width: 400px;
+		height: 200px;
+		top: 30%;
+		left: 10%;
+	}
+	.banner .box .content {
+		margin: 0;
+		padding: 25px;
+		background: rgba(255,255,255,0.3);
+		transition: 0.5s;
+	}
+	.banner .box .content h3 {
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		line-height: 25px;
+	}
+	.banner .box .content p {
+		font-size: 16px;
+	}
+	.banner .box .content a {
+		text-align: center;
+		font-size: 10px;
+		text-decoration: none;
+		padding: 10px 25px;
+		background: #000;
+		color: #fff;
+		transition: 0.5s;
+	}
+	.banner .box .content a:hover {
+		background: #fff;
+		color: #000;
+	}
+	.jumbo {
+		width: 100%;
+		height: 250px;
+	}
+	.jumbo .content {
+		max-width: 1000px;
+		display: block;
+	}
+	.jumbo .content p {
+		padding: 20px;
+		text-align: center;
+		font-size: 17px;
+	}
+	.jumbo .content a {
+		position: relative;
+		margin: 0 450px;
+		padding: 10px 20px;
+	}
+	section.services {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	section.services .content h1 {
+		font-size: 2em;
+		color: #fff;
+		text-align: center;
+	}
+	section.services .content .cardBx {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	section.services .content .cardBx .card {
+		width: 250px;
+		height: 400px;
+		margin-left: 50px;
+		padding: 10px;
+		background: #fff;
+		justify-content: space-evenly;
+	}
+	section.services .content .cardBx .card .fa {
+		width: 80px;
+		height: 80px;
+		background: #000;
+		color: #fff;
+		border-radius: 50%;
+		line-height: 90px;
+		font-size: 2em;
+	}
+	section.about {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 50px 0;
+	}
+	section.about .content {
+		max-width: 1000px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+	}
+	section.about .content h1 {
+		font-size: 3em;
+	}
+	section.about .content p {
+		font-size: 1em;
+		padding: 50px;
+		font-weight: 600;
+	}
+	section.about .content a {
+		padding: 10px 20px;
+		background: #000;
+		color: #fff;
+		text-decoration: none;
+	}
+	section.about .content a:hover {
+		background: #fff;
+		color: #000;
+	}
+}
